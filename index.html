@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+
+// header component rendering te nevigation bar
+       const Header = ({title}) =>{
+        return(
+            <header>
+            <nav>
+                <h1>{title}</h1>    
+            </nav>    
+            </header>
+        );
+       };
+
+// content component rending the main content and adding the heading element
+
+       const content = () =>{
+        return(
+            <main>
+                <h2>main content</h2>
+                <Article/>
+            </main>
+        );
+       };
+
+// Article component rendering the article content with rending the h3 element and p element
+
+       const Article = () =>{
+        return(
+            <article>
+            <h3>Article title</h3>
+            <p>its article content</p>    
+            </article>
+        );
+       };
+
+//  Footer component rending the footer content
+       const Footer =() =>{
+        return(
+            <footer>
+                <p>&copy; 2023 is your content</p>    
+            </footer>
+        );
+       };
+
+// component intraction 
+
+const App = () =>{
+    const titleHead = "its my component"
+    return(
+        <div>
+            <Header title={titleHead} />   
+            <Content/>
+            <Footer/>
+        </div>
+    );
+};
+
+
+    </script>
+</body>
+</html>
